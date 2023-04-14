@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Gazebo & GUI Configuration -->
+  <arg name="gazebo"      default="true"  doc="Should the gazebo simulation be launched? Use false in case if you want to include this file and launch gazebo yourself" />
+  <arg name="headless"    default="false" doc="Should the gazebo GUI be launched?" />
+  <arg name="world"       default="worlds/empty.world" doc="Filename to a SDF World for gazebo to use" />
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch" if="$(arg gazebo)">
+    <arg name="world_name" value="$(arg world)"/>
+    <!-- Always start in paused mode, and only unpause when spawning the model -->
+    <arg name="paused" value="true"/>
+    <arg name="gui" value="$(eval not arg('headless'))"/>
+    <arg name="use_sim_time" value="true"/>
+  </include>
+
+  <!-- <node name="spawn_table" pkg="gazebo_ros" type="spawn_model" args="-file $(find panda_moveit_config)/env/gazebo_models/table/model.sdf -sdf -x 0.6 -y 0 -z 0 -R 0 -P 0 -Y 1.57 -model table"/>
+  <node name="spawn_kinect_ros" pkg="gazebo_ros" type="spawn_model" args="-file $(find panda_moveit_config)/env/gazebo_models/kinect_ros/model.sdf -sdf -x 1.6 -y 0.2 -z 2 -R 0 -P 0.289 -Y 3.0 -model kinect_ros"/> -->
+  
+  <node name="spawn_kinect_ros" pkg="gazebo_ros" type="spawn_model" args="-file $(find panda_moveit_config)/urdf/static_environment.xacro -urdf -model camera" />
+  
+</launch>
