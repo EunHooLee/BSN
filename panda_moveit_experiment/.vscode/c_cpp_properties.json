@@ -1,0 +1,31 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/leh/ws_moveit/devel/include/**",
+        "/home/leh/catkin_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/leh/catkin_ws/src/biased_sampling_flow/include/**",
+        "/home/leh/ws_moveit/src/franka_ros/franka_control/include/**",
+        "/home/leh/ws_moveit/src/franka_ros/franka_example_controllers/include/**",
+        "/home/leh/ws_moveit/src/franka_ros/franka_gazebo/include/**",
+        "/home/leh/ws_moveit/src/franka_ros/franka_gripper/include/**",
+        "/home/leh/ws_moveit/src/franka_ros/franka_hw/include/**",
+        "/home/leh/ws_moveit/src/panda_moveit_experiment/include/**",
+        "/home/leh/catkin_ws/src/reachability_map_visualizer/include/**",
+        "/home/leh/catkin_ws/src/velodyne_simulator-master/velodyne_gazebo_plugins/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
